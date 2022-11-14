@@ -8,7 +8,7 @@ const app = next({ dev });
 const handle = app.getRequestHandler();
 
 const httpsOptions = {
-    key: fs.readFileSync("./certs/key.pem"),
+    key: fs.readFileSync("./certs/privkey.pem"),
     cert: fs.readFileSync("./certs/cert.pem")
 };
 
