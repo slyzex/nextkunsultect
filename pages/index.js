@@ -8,7 +8,7 @@ export default function Home() {
 
   useEffect(() => {
     getData();
-    getPicture();
+    // getPicture();
   }, []);
 
   
@@ -23,7 +23,7 @@ export default function Home() {
   
   const getData = async () => {
     try {
-     const response = await fetch('http://10.1.1.110:1337/api/konsultech-texts/');
+     const response = await fetch('https://pow.postrix.net/api/konsultech-texts/');
      const json = await response.json();
      const startwithuss = await json.data[0].attributes.konText
      const designanddevelopments = await json.data[1].attributes.konText
@@ -49,16 +49,16 @@ export default function Home() {
    }
   }
 
-  const getPicture = async () => {
-    try {
-     const response = await fetch('http://10.1.1.110:1337/api/upload/files/1');
-     const json = await response.json();
-      console.log(json)
-      console.log('json')
-   } catch (error) {
-     console.error(error);
-   }
-  }
+  // const getPicture = async () => {
+  //   try {
+  //    const response = await fetch('http://10.1.1.110:1337/api/upload/files/1');
+  //    const json = await response.json();
+  //     console.log(json)
+  //     console.log('json')
+  //  } catch (error) {
+  //    console.error(error);
+  //  }
+  // }
 
   return (
     <div className="home-container">
@@ -181,7 +181,7 @@ export default function Home() {
           <div className="home-card">
             <div className="home-icon-container">
               <img
-              src='http://10.1.1.110:1337/uploads/123_73815b93eb.png?updated_at=2022-11-05T15:13:49.121Z'
+              src='http://pow.postrix.net/uploads/123_73815b93eb.png?updated_at=2022-11-05T15:13:49.121Z'
               className="home-icon14"
               draggable="false"
               />
@@ -196,7 +196,7 @@ export default function Home() {
           <div className="home-card1">
             <div className="home-icon-container1">
               <img
-              src='http://10.1.1.110:1337/uploads/1234_d626a014bf.png?updated_at=2022-11-05T15:14:22.210Z'
+              src='http://pow.postrix.net/uploads/1234_d626a014bf.png?updated_at=2022-11-05T15:14:22.210Z'
               className="home-icon17"
               draggable="false"
 
@@ -213,7 +213,7 @@ export default function Home() {
             <div className="home-icon-container2">
               <img
               className="home-icon18"
-              src='http://10.1.1.110:1337/uploads/12345_b5fd50f29b.png?updated_at=2022-11-05T15:15:13.613Z'
+              src='http://pow.postrix.net/uploads/12345_b5fd50f29b.png?updated_at=2022-11-05T15:15:13.613Z'
               draggable="false"
 
               />
@@ -232,7 +232,7 @@ export default function Home() {
           <div className="home-heading-container1">
           <img
               className="about-icon"
-              src='http://10.1.1.110:1337/uploads/kunsultek_ff8363eb64.png?updated_at=2022-11-05T16:05:29.386Z'
+              src='http://pow.postrix.net/uploads/kunsultek_ff8363eb64.png?updated_at=2022-11-05T16:05:29.386Z'
               draggable="false"
 
               />
@@ -327,17 +327,17 @@ export default function Home() {
         <div className="home-logo-container">
           <img
             alt="image"
-            src="http://10.1.1.110:1337/uploads/12345678_74b77d2fd1.jpg?updated_at=2022-11-05T15:51:59.750Z"
+            src="http://pow.postrix.net/uploads/12345678_74b77d2fd1.jpg?updated_at=2022-11-05T15:51:59.750Z"
             className="home-logo"
           />
           <img
             alt="image"
-            src="http://10.1.1.110:1337/uploads/123456_ca4343d2cb.png?updated_at=2022-11-05T15:52:00.149Z"
+            src="http://pow.postrix.net/uploads/123456_ca4343d2cb.png?updated_at=2022-11-05T15:52:00.149Z"
             className="home-logo"
           />
           <img
             alt="image"
-            src="http://10.1.1.110:1337/uploads/1234567_fdab00fda7.png?updated_at=2022-11-05T15:52:00.043Z"
+            src="http://pow.postrix.net/uploads/1234567_fdab00fda7.png?updated_at=2022-11-05T15:52:00.043Z"
             className="home-logo"
           />
           {/* <img
